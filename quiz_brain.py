@@ -16,11 +16,11 @@ class QuizBrain:
         self.current_question = self.question_list[self.question_number]
         self.question_number += 1
         q_text = html.unescape(self.current_question.text)
-        return f"Q.{self.question_number}: {q_text} (True/False): "
+        return f"Q.{self.question_number}: {q_text} "
         # user_answer = input()
         # self.check_answer(user_answer)
 
-    def check_answer(self, user_answer):
+    def check_answer(self):
         correct_answer = self.current_question.answer
         if user_answer.lower() == correct_answer.lower():
             self.score += 1
